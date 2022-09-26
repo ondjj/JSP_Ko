@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class DirectURLServlet
  */
-@WebServlet({ "/LoginServlet", "/Login" })
-public class LoginServlet extends HttpServlet {
+@WebServlet("/directURL")
+public class DirectURLServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginServlet() {
+    public DirectURLServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,14 +28,14 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String id = request.getParameter("id");
-		String password = request.getParameter("password");
-		response.setContentType("text/html;charset=UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		String name = request.getParameter("name");
+		String age = request.getParameter("age");
 		PrintWriter out = response.getWriter();
-		out.println("아이디="+id+"<br>");
-		out.println("패스워드="+password+"<br>");
+		
+		out.println("이름 :" + name + "<br>");
+		out.println("나이 :" + age + "<br>");
 		
 	}
-
 
 }
