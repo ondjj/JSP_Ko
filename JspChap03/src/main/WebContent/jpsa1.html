@@ -3,9 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<style>
+	#josaArea {
+		text-align : "center";
+		width : 400px;
+		margin : auto;
+		border : 1px solid black;
+	}
+	
+	h1 { text-align : center ;}
+</style>
 </head>
 <body>
-<div align="center">
+<!-- <div align="center">
 	<h2>당신의 선호도 조사</h2>
 	<form action="josa1" method="post">
 	1.당신이 좋아하는 과일은? <input type="text" name="fruit"> <br><br>
@@ -13,8 +24,17 @@
 	3.당신이 좋아하는 운동은? <input type="text" name="gym"> <br><br>
 	<input type="submit" value="입력">
 	</form>
+</div> -->
 
-</div>
+	<h1>당신의 선호도 조사</h1>
+	<section id = "josaArea">
+		<form action="josa1" method="post">
+			1.당신이 좋아하는 과일은? <input type="text" name="fruit"/> <br>
+			2.당신이 좋아하는 영화는? <input type="text" name="movie"/> <br>
+			3.당신이 좋아하는 운동은? <input type="text" name="gym"/> <br>
+			<input type="submit" value="입력"/>
+		</form>
+	</section>
 
 </body>
 </html>
