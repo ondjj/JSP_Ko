@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div align="center">
 	<h2>영역과 속성 테스트</h2>
 	<form action="attributeTest1.jsp" method="post">
-	
 		<table border="1">
 			<tr>
 				<td colspan="2">
@@ -38,8 +38,8 @@
 				</td>
 			</tr>
 		</table>
-	
 	</form>
+</div>
 
 </body>
 </html>
