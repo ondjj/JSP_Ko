@@ -10,7 +10,10 @@
 <title>WelCome</title>
 </head>
 <body>
-<%@ include file="menu.jsp" %>
+<%-- <%@ include file="menu.jsp" %> --%>
+<jsp:include page="menu.jsp">
+	<jsp:param value="menu.jsp" name="menu"/>
+</jsp:include>
 
 	<%! String greeting = "쇼핑몰";
 		String tagline = "웹 쇼핑몰에 오신걸 환영합니다.";
@@ -31,6 +34,7 @@
 					<%= tagline %>
 				</h3>
 				<%
+					response.setIntHeader("Refresh", 5);
 					Date day = new java.util.Date();
 					int hour = day.getHours();
 					int minute = day.getMinutes();
@@ -50,6 +54,9 @@
 			</div>
 		</div>
 	</main>
-	<%@ include file="footer.jsp" %>
+	<%-- <%@ include file="footer.jsp" %> --%>
+	<jsp:include page="footer.jsp">
+		<jsp:param value="footer.jsp" name="footer"/>
+	</jsp:include>
 </body>
 </html>
