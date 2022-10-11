@@ -16,7 +16,7 @@ public class Product implements Serializable{
 	private String category;  // 분류
 	private long unitsInStock; // 재고 수
 	private String condition; // 신상품 or 중고픔 or 재생품
-	
+
 	public Product() {
 		super();
 	}

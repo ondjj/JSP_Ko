@@ -24,6 +24,8 @@
 			<h1 class="dispaly-4">
 				<%= greeting %>
 			</h1>
+			
+			<a href="admin_login.jsp" class="btn btn-secondary" role="button">관리자 로그인</a>
 		</div>
 	</div>
 	
@@ -50,7 +52,7 @@
 					
 					out.println("지금은 "+am_pm+" "+(hour-12)+"시 "+minute+"분 "+second+"초" + "입니다.");
 				%>
-				<hr>
+				
 			</div>
 		</div>
 	</main>
