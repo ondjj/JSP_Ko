@@ -24,15 +24,15 @@
 	<h1> 제품 정보 메인 페이지입니다.</h1>
 	<% 
 		for(int i=0; i<outer.getAllProducts().size(); i++){
-			String id = outer.getAllProducts().get(i).getOuterProductID();
-			String company =  outer.getAllProducts().get(i).getOuterProductCompany();
-			String description = outer.getAllProducts().get(i).getOuterProductDescription();
-			int year = outer.getAllProducts().get(i).getOuterProductYear(); 
-			String size = outer.getAllProducts().get(i).getOuterProductSize();
-			int price = outer.getAllProducts().get(i).getOuterProductCost();
-			String gender = outer.getAllProducts().get(i).getOuterProductSex();
-			
+			String id = out1.get(i).getOuterProductID();
+			String company =  out1.get(i).getOuterProductCompany();
+			String description = out1.get(i).getOuterProductDescription();
+			int year = out1.get(i).getOuterProductYear(); 
+			String size = out1.get(i).getOuterProductSize();
+			int price = out1.get(i).getOuterProductCost();
+			String gender = out1.get(i).getOuterProductSex();
 	%>
+	
 </div>
 	<div>
 		<h1><%= i+1 %> 번째 제품 요약 정보입니다.</h1>
@@ -41,23 +41,12 @@
 		<h3>상품정보</h3>
 		<p> <%= description %> </p>
 		<p> 성별 - <%= gender %> &nbsp; 사이즈 : <%= size %></p>
-		<p> <%= year %>년 생산 제품 &nbsp; <%= price %>원</p> 
+		<p> <%= year %>년 생산 &nbsp; 가격 : <%= price %>원</p>
+		<hr>
+		<a href='main2.jsp?id=<%= id %>'>제품 세부 정보</a>
 	</div>
 	
 	<% 	} %>
 
-
-<!-- <div>
-	<h1> 첫 번째 제품 요약 정보입니다.</h1>
-</div>
-
-<div>
-	<h1> 두 번째 제품 요약 정보입니다.</h1>
-</div>
-
-<div>
-	<h1> 세 번째 제품 요약 정보입니다.</h1>
-</div>
- -->
 </body>
 </html>
