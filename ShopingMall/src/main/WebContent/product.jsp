@@ -1,15 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="dto.Product" %>
-<jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session"/>
+<%@ page import="dao.ProductRepository" %>
+<%-- <jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session"/>
+ --%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<link rel="stylesheet" 
-	  href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 </head>
 <body>
 	<jsp:include page="menu.jsp"/>
@@ -22,13 +23,15 @@
 	</div>
 	<%
 		String id = request.getParameter("id");
-		Product product = productDAO.getProductById(id);
+		ProductRepository dao = ProductRepository.getInstacne();
+		Product product = dao.getProductById(id);
 	%>
 	
 	<div class="container">
 		<div class = "row">
 			<div class = "col-md-6">
-				<h3><%=product.getPname() %></h3>
+				<img alt="" src="c:\\upload\<%= product.getFilename() %>" style="width:100%">
+				<h3><%= product.getPname() %></h3>
 				<p><%= product.getDescription() %></p>
 				<p>상품 코드 : <%= product.getProductId() %> </p>
 				<p>제조사 : <%=product.getManufacturer() %> </p>

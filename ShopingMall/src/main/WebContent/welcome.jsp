@@ -5,7 +5,7 @@
 <html>
 <head>
 <link rel="stylesheet" 
-	  href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+	  href="./resources/css/bootstrap.min.css">
 <meta charset="UTF-8">
 <title>WelCome</title>
 </head>

@@ -5,8 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" 
-	  href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 	  <title>상품 등록</title>
 </head>
 <body>
@@ -20,7 +19,7 @@
 	</div>
 	
 <div class="container">
-	<form action="" name="newProduct" method="post" class="form-horizontal">
+	<form action="./processAddProduct.jsp" name="newProduct" method="post" class="form-horizontal" enctype="multipart/form-data">
 	<div class="form-group row">
 		<label class="col-sm-2">상품 코드</label>
 		<div class="col-sm-3">
@@ -52,30 +51,43 @@
 	<div class="form-group row">
 		<label class="col-sm-2">제조사</label>
 		<div class="col-sm-3">
-			<input type="text" name="productCompany" class="form-control">
+			<input type="text" name="manufacturer" class="form-control">
 		</div>
 	</div>
 	
 	<div class="form-group row">
 		<label class="col-sm-2">분류</label>
 		<div class="col-sm-3">
-			<input type="text" name="productCategory" class="form-control">
+			<input type="text" name="category" class="form-control">
 		</div>
 	</div>
 	
 	<div class="form-group row">
 		<label class="col-sm-2">재고수</label>
 		<div class="col-sm-3">
-			<input type="text" name="productCount" class="form-control">
+			<input type="text" name="unitsInStock" class="form-control">
 		</div>
 	</div>
 	
 	<div class="form-group row">
-		<label class="col-sm-2">재고수</label>
-		<div class="col-sm-3">
-			<input type="radio" name="productStatus" value="신규 제품" >신규 제품
-			<input type="radio" name="productStatus" value="중고 제품" >중고 제품
-			<input type="radio" name="productStatus" value="재생 제품" >재생 제품
+		<label class="col-sm-2">상태</label>
+		<div class="col-sm-5">
+			<input type="radio" name="condition" value="New" >신규 제품
+			<input type="radio" name="condition" value="Old" >중고 제품
+			<input type="radio" name="condition" value="Refurbished" >재생 제품
+		</div>
+	</div>
+	
+	<div class="form-group row">
+		<label class="col-sm-2">이미지</label>
+		<div class="col-sm-5">
+			<input type="file" name="productImage" class="form-control">
+		</div>
+	</div>
+	
+	<div class="form-group row">
+		<div class="col-sm-offset-2 col-sm-10">
+			<input type="submit" class="btn btn-primary" value="등록">
 		</div>
 	</div>
 	 
