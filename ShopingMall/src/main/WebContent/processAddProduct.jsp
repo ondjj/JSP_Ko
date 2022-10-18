@@ -55,6 +55,7 @@
 	Enumeration files = multi.getFileNames();	// 전송 파라미터 중 파일을 받는 메소드
 	String fname = (String)files.nextElement();	// 하나의 요소를 저장
 	String fileName = multi.getFilesystemName(fname); 
+	
 
 %>
 
