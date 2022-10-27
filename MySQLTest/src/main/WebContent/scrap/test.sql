@@ -26,3 +26,14 @@ insert into student values('3', 'def', '1234');
 update student set name='coffe' where id='1';
 
 delete from student where name='zzz';
+
+select * from student;
+
+create table member(
+	id varchar(20) not null,
+	passwd varchar(20),
+	name varchar(30),
+	primary key (id)
+);
+
+select * from member;
