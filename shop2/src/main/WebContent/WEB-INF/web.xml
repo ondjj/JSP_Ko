@@ -10,6 +10,7 @@
 			<web-resource-name>shop2</web-resource-name>
 			<description>쇼핑몰</description>
 			<url-pattern>/addProduct.jsp</url-pattern>
+			<url-pattern>/editProduct.jsp</url-pattern>
 		</web-resource-collection>
 		
 		<auth-constraint>
