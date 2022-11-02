@@ -14,3 +14,4 @@ create table if not exists product(
 )default charset=utf8;
 
 show tables;
+select * from product;
