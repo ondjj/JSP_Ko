@@ -1,6 +1,6 @@
 use webmarketdb;
 
-create table if not exists product(
+create table product(
 	p_id varchar(10) not null,
 	p_name varchar(10),
 	p_unitPrice integer,
@@ -9,15 +9,29 @@ create table if not exists product(
 	p_manufacturer varchar(20),
 	p_unitsInStock long,
 	p_condition varchar(20),
-	P_fileName varchar(20),
+	p_filename varchar(20),
 	primary key(p_id)
 )default charset=utf8;
 
-show tables;
+desc product;
+
+insert into product values('P1234','iPhone 6s',
+800000,'1900 retina display, 8mega pixel','Smart phone',
+'Apple',1000,'new','P1234.png');
+
+insert into product values('P1235','LG pc gram',
+1500000,'3.3inch ips led display','Notebook',
+'LG',1000,'new','P1235.png');
+
+insert into product values('P1236','GalaxyTab',
+900000,'3.3inch ips panel super amoled','Tablet',
+'Samsung',1000,'new','P1236.png');
+
 select * from product;
 
+
 create table member (
-	id varchar(10) not null,
+	id varchar(10) not null,        
 	password varchar(10) not null,
 	name varchar(10) not null,
 	gender varchar(4),
@@ -30,4 +44,20 @@ create table member (
 )default charset=utf8;
 
 desc member;
+
 select * from member;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
